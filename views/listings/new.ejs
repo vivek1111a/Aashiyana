@@ -1,50 +1,96 @@
 <% layout("/layout/boilerplate") %>
+<!--  -->
 <% block('head').append('<link rel="stylesheet" href="/edit.css" />') %>
 <body>
   <h3>Give me new entry</h3>
 
-  <form action="/listings" method="POST" class="form-group">
+  <form
+    action="/listings"
+    method="POST"
+    class="form-group needs-validation"
+    novalidate
+  >
+    <div class="form-group row inputtitle">
+      <label for="title" class="col-sm-2 col-form-label">Title</label>
+      <div class="col-sm-10">
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          name="title"
+          required
+        />
+        <div class="valid-feedback">Looks good</div>
+        <div class="invalid-feedback">Give me a catchy title</div>
+      </div>
+    </div>
 
     <div class="form-group row inputtitle">
-    <label for="title" class="col-sm-2 col-form-label">Title</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="title" name="title">
-    </div>
-  </div>
-
-      <div class="form-group row inputtitle">
       <label for="image" class="col-sm-2 col-form-label">Image</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="image" name="image.url">
+        <input type="text" class="form-control" id="image" name="image.url" />
+        <div class="valid-feedback">Image looks good</div>
       </div>
     </div>
 
     <div class="inputtitle mb-3">
-    <label class="mb-1" for="description">Description</label>
-    <textarea name="description" id="description" cols="50" rows="10" class="form-control"></textarea>
-</div>
+      <label class="mb-1" for="description">Description</label>
+      <textarea
+        name="description"
+        id="description"
+        cols="50"
+        rows="10"
+        class="form-control"
+        required
+      ></textarea>
+      <div class="valid-feedback">Description looks good</div>
+      <div class="invalid-feedback">Describe your listing in few words</div>
+    </div>
 
-      <div class="form-group row inputtitle">
+    <div class="form-group row inputtitle">
       <label for="price" class="col-sm-2 col-form-label">Price</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="price"name="price">
+        <input
+          type="text"
+          class="form-control"
+          id="price"
+          name="price"
+          required
+        />
+        <div class="valid-feedback">Price looks good</div>
+        <div class="invalid-feedback">Price can not be empty</div>
       </div>
     </div>
 
     <div class="form-group row inputtitle">
       <label for="location" class="col-sm-2 col-form-label">Location</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="location" name="location">
+        <input
+          type="text"
+          class="form-control"
+          id="location"
+          name="location"
+          required
+        />
+        <div class="valid-feedback">Location looks good</div>
+        <div class="invalid-feedback">Give me location</div>
       </div>
     </div>
 
     <div class="form-group row inputtitle">
       <label for="country" class="col-sm-2 col-form-label">Country</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="country"  name="country">
+        <input
+          type="text"
+          class="form-control"
+          id="country"
+          name="country"
+          required
+        />
+        <div class="valid-feedback">Country looks good</div>
+        <div class="invalid-feedback">Give me country</div>
       </div>
       <button class="btn btn-info">Add</button>
     </div>
-
   </form>
 </body>

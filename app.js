@@ -81,12 +81,12 @@ app.put("/listing/:id", async (req, res) => {
   res.redirect("/listings");
 });
 
-// //destroy route
-// app.delete("/listings/:id", async (req, res) => {
-//   let { id } = req.params;
-//   let listdel = await Listing.findByIdAndDelete(id);
-//   res.redirect("/listings");
-// });
+//destroy route
+app.delete("/listings/:id", async (req, res) => {
+  let { id } = req.params;
+  let listdel = await Listing.findByIdAndDelete(id);
+  res.redirect("/listings");
+});
 
 // //error handling
 // app.get("/err", check, (req, res) => {
