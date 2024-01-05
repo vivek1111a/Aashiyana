@@ -1,0 +1,115 @@
+<% layout("/layout/boilerplate") %>
+<!--  -->
+<% block('head').append('<link rel="stylesheet" href="/edit.css" />') %>
+<body>
+  <form
+    action="/listing/<%= listedit._id  %>/?_method=PUT"
+    method="POST"
+    class="form-group"
+  >
+    <div class="form-group row inputtitle pt-4">
+      <label for="title" class="col-sm-2 col-form-label">Title</label>
+      <div class="col-sm-10">
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          name="title"
+          value="<%= listedit.title %>"
+        />
+      </div>
+    </div>
+
+    <div class="form-group row inputtitle">
+      <label for="image" class="col-sm-2 col-form-label">Image</label>
+      <div class="col-sm-10">
+        <input
+          type="text"
+          class="form-control"
+          id="image"
+          name="image.url"
+          value="<%= listedit.image.url %>"
+        />
+      </div>
+    </div>
+
+    <div class="inputtitle mb-3">
+      <label class="mb-1" for="description">Description</label>
+      <textarea
+        name="description"
+        id="description"
+        cols="50"
+        rows="10"
+        class="form-control"
+      >
+<%= listedit.description %></textarea
+      >
+    </div>
+
+    <div class="form-group row inputtitle">
+      <label for="price" class="col-sm-2 col-form-label">Price</label>
+      <div class="col-sm-10">
+        <input
+          type="text"
+          class="form-control"
+          id="price"
+          name="price"
+          value="<%= listedit.price %>"
+        />
+      </div>
+    </div>
+
+    <div class="form-group row inputtitle">
+      <label for="location" class="col-sm-2 col-form-label">Location</label>
+      <div class="col-sm-10">
+        <input
+          type="text"
+          class="form-control"
+          id="location"
+          name="location"
+          value="<%= listedit.location %>"
+        />
+      </div>
+    </div>
+
+    <div class="form-group row inputtitle">
+      <label for="country" class="col-sm-2 col-form-label">Country</label>
+      <div class="col-sm-10">
+        <input
+          type="text"
+          class="form-control"
+          id="country"
+          name="country"
+          value="<%= listedit.country %>"
+        />
+      </div>
+      <button class="btn btn-info vutton">Edit</button>
+    </div>
+  </form>
+</body>
+
+<!--
+<body>
+  <form action="/listing/<%= listedit._id  %>/?_method=PUT" method="POST">
+    <h2>Give me a title</h2>
+    <input type="text" name="title" id="" value="<%= listedit.title %>" />
+    <h2>Give me Image link</h2>
+    <input
+      type="text"
+      name="image.url"
+      id=""
+      value="<%= listedit.image.url %>"
+    />
+    <h2>Description</h2>
+    <textarea name="description" id="" cols="50" rows="10">
+<%= listedit.description %></textarea
+    >
+    <h2>Give me price</h2>
+    <input type="text" name="price" id="" value="<%= listedit.price %>" />
+    <h2>location</h2>
+    <input type="text" name="location" id="" value="<%= listedit.location %>" />
+    <h2>Country</h2>
+    <input type="text" name="country" id="" value="<%= listedit.country %>" />
+    <button>Edit</button>
+  </form>
+</body> -->

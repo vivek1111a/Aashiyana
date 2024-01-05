@@ -1,0 +1,24 @@
+<% layout("/layout/boilerplate") %>
+<body>
+  <div class="container mt-5">
+    <div class="card mb-3">
+      <img src="<%= viewlist.image.url %>" alt="Photos" class="card-img-top mx-auto my-4" style="max-width: 30rem;" />
+      <div class="card-body">
+        <h5 class="card-title"><%= viewlist.title %></h5>
+        <p class="card-text"><%= viewlist.description %></p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><strong>Price:</strong>  &#8377; <%= viewlist.price.toLocaleString("en-IN") %> /night</li>
+        <li class="list-group-item"><%= viewlist.location %></li>
+        <li class="list-group-item"><%= viewlist.country %></li>
+      </ul>
+      <div class="card-footer d-flex justify-content-between px-3">
+        <a href="/listings/<%= viewlist._id %>/edit" class="btn btn-primary btn-lg px-4">Edit</a>
+        <form action="/listings/<%= viewlist._id %>?_method=DELETE" method="POST" style="display: inline;">
+          <button class="btn btn-danger btn-lg px-4" type="submit">Delete</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>

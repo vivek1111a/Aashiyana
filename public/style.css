@@ -1,0 +1,42 @@
+/* .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+} */
+.card {
+  border-radius: 1rem !important;
+}
+
+.image {
+  width: 20rem;
+  margin: 0.8rem;
+  aspect-ratio: 1.33 !important;
+  align-self: center;
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black !important;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.footercenter i {
+  font-size: 1.5rem;
+  padding: 1rem !important;
+}
+.footer {
+  padding: 3rem;
+  background: whitesmoke;
+}
+.footerend {
+  font-size: 1.2rem;
+}
+
+.Body {
+  background-color: whitesmoke;
+}

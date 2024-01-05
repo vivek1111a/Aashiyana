@@ -1,0 +1,16 @@
+h3{
+    padding: 1rem;
+    text-align: center;
+    font-size: 2rem;
+}
+.inputtitle {
+    font-size: 1.25rem;
+    padding:0% 20%;
+}
+.btn{
+    margin-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: 45%;
+    margin-right: 45%;
+}

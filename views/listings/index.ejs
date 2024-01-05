@@ -1,0 +1,23 @@
+<% layout("/layout/boilerplate") %>
+<% block('head').append('<link rel="stylesheet" href="/index.css" />') %>
+<body>
+  <!-- <h1>This is a website</h1> -->
+  <div class="row row-cols-sm-1 row-cols-md-3 row-cols-lg-4 mt-1">
+    <% for(let list of allListings){ %>
+    <div class="col text-center">
+      <a href="/listings/<%=list._id %>">
+        <div class="card border m-1 mb-4">
+          <img src="<%=list.image.url%>" alt="Photos" class="image" />
+          <div class="title mb-2"><%= list.title %></div>
+          <div class="mb-3">
+            &#8377; <%= list.price.toLocaleString("en-IN") %> /night
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <% } %>
+  </div>
+</body>
+
+<!-- d-flex flex-wrap justify-content-center p -->
